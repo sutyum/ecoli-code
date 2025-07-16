@@ -17,15 +17,15 @@ Develop a modular, electricity‑driven platform that converts **CO₂/CO‑rich
 ## 2  Process Architecture
 
 ```mermaid
-flowchart LR
-    A[Flue gas (CO₂ + CO)] -->|Gas capture & drying| B(Electrocatalytic<br>formate reactor)
+flowchart TD
+    A["Flue gas (CO₂ + CO)"] -->|Gas capture & drying| B(Electrocatalytic<br>formate reactor)
     B -->|Liquid HCOO⁻/HCOOH| C(Cell‑free<br>Formate→Acetyl‑CoA)
-    C -->|Acetyl‑CoA pool| D(Cell‑free<br>reverse β‑oxidation)
+    C -->|Acetyl‑CoA pool| D(Cell‑free<br>reverse β‑oxidation)
     D -->|C₄–C₁₆ acyl‑CoA / acids| E{Chain‑length<br>decision}
-    E -- C₈–C₁₆ --> F(Zeolite ZSM‑5<br>dehydration / oligomerisation)
+    E -- C₈–C₁₆ --> F(Zeolite ZSM‑5<br>dehydration / oligomerisation)
     E -- C₄–C₈ --> G(Single‑step ATJ‑type<br>oligomerisation)
     F & G --> H(Hydroprocessing & distillation)
-    H --> I(SAF blend stock – ASTM D1655/D7566)
+    H --> I(SAF blend stock – ASTM D1655/D7566)
 ```
 
 * **Distributed front‑end (A → B):** skid‑mounted gas‑diffusion MEA stacks at point sources (cement, steel, refinery). Formate solution (≈ 35 wt %) transported to the biocatalysis hub.
